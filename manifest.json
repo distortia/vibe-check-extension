@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Vibe Check",
+  "version": "1.0.0",
+  "description": "Check the vibes — a random 0–100 score for how good things are feeling.",
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

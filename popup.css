@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 220px;
+  min-height: 200px;
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  background: #ebe5de;
+  color: #3d3832;
+}
+
+.container {
+  --vibe-hue: 60;
+  padding: 28px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  background: linear-gradient(
+    165deg,
+    hsl(var(--vibe-hue), 35%, 96%) 0%,
+    hsl(var(--vibe-hue), 25%, 92%) 100%
+  );
+  min-height: 200px;
+  transition: background 0.4s ease;
+}
+
+.vibe-message {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: italic;
+  color: hsl(var(--vibe-hue), 25%, 35%);
+  text-transform: lowercase;
+  margin: 2px 0;
+  transition: color 0.4s ease;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #6b6560;
+  text-transform: lowercase;
+}
+
+.score {
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1;
+  color: hsl(var(--vibe-hue), 40%, 25%);
+  letter-spacing: -0.02em;
+  transition: color 0.4s ease;
+}
+
+.out-of {
+  font-size: 13px;
+  color: #8a847c;
+  text-transform: lowercase;
+  margin-bottom: 8px;
+}
+
+.again {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  color: #5a534c;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 999px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-transform: lowercase;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.again:hover {
+  background: rgba(255, 255, 255, 0.95);
+  color: #2d2925;
+}
+
+.again:active {
+  transform: scale(0.98);
+}
