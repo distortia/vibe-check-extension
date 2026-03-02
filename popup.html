@@ -12,7 +12,11 @@
 <body>
   <div class="container" id="container">
     <p class="label">the vibes are</p>
-    <p class="score" id="score">--</p>
+    <div class="score-row">
+      <button type="button" class="nudge nudge-minus" id="decrement" aria-label="decrease vibes">−</button>
+      <p class="score" id="score">--</p>
+      <button type="button" class="nudge nudge-plus" id="increment" aria-label="increase vibes">+</button>
+    </div>
     <p class="vibe-message" id="vibeMessage"></p>
     <p class="out-of">out of 100</p>
     <button type="button" class="again" id="again">check again</button>

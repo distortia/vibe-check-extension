@@ -3,6 +3,8 @@
   const scoreEl = document.getElementById('score');
   const vibeMessageEl = document.getElementById('vibeMessage');
   const againBtn = document.getElementById('again');
+  const decrementBtn = document.getElementById('decrement');
+  const incrementBtn = document.getElementById('increment');
 
   const vibeMessages = [
     { min: 0, max: 19, text: 'rough out here' },
@@ -27,14 +29,33 @@
     return Math.round((score / 100) * 120);
   }
 
-  function showScore() {
-    const score = randomVibes();
-    scoreEl.textContent = score;
-    vibeMessageEl.textContent = getVibeMessage(score);
-    var hue = hueForScore(score);
-    container.style.setProperty('--vibe-hue', hue);
+  function getCurrentScore() {
+    var text = scoreEl.textContent;
+    var n = parseInt(text, 10);
+    return isNaN(n) ? 50 : n;
   }
 
-  againBtn.addEventListener('click', showScore);
-  showScore();
+  function updateDisplay(score) {
+    score = Math.max(0, Math.min(100, score));
+    scoreEl.textContent = score;
+    vibeMessageEl.textContent = getVibeMessage(score);
+    container.style.setProperty('--vibe-hue', hueForScore(score));
+  }
+
+  function randomScore() {
+    updateDisplay(randomVibes());
+  }
+
+  function decrement() {
+    updateDisplay(getCurrentScore() - 5);
+  }
+
+  function increment() {
+    updateDisplay(getCurrentScore() + 5);
+  }
+
+  againBtn.addEventListener('click', randomScore);
+  decrementBtn.addEventListener('click', decrement);
+  incrementBtn.addEventListener('click', increment);
+  updateDisplay(randomVibes());
 })();

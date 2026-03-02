@@ -46,6 +46,13 @@ body {
   text-transform: lowercase;
 }
 
+.score-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
 .score {
   font-size: 52px;
   font-weight: 600;
@@ -53,6 +60,36 @@ body {
   color: hsl(var(--vibe-hue), 40%, 25%);
   letter-spacing: -0.02em;
   transition: color 0.4s ease;
+  min-width: 1.2em;
+  text-align: center;
+}
+
+.nudge {
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+  color: #5a534c;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.nudge:hover {
+  background: rgba(255, 255, 255, 0.95);
+  color: #2d2925;
+}
+
+.nudge:active {
+  transform: scale(0.92);
 }
 
 .out-of {
