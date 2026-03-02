@@ -20,6 +20,15 @@
     <p class="vibe-message" id="vibeMessage"></p>
     <p class="out-of">out of 100</p>
     <button type="button" class="again" id="again">check again</button>
+    <div class="ticker-row">
+      <input type="text" class="ticker-input" id="tickerInput" placeholder="e.g. AAPL" maxlength="10" spellcheck="false" />
+      <button type="button" class="ticker-save" id="tickerSave">add stock</button>
+    </div>
+    <div class="apikey-row">
+      <input type="password" class="apikey-input" id="apikeyInput" placeholder="Paste Finnhub API key (free at finnhub.io)" spellcheck="false" autocomplete="off" />
+      <button type="button" class="ticker-save" id="apikeySave">save</button>
+    </div>
+    <p class="ticker-status" id="tickerStatus"></p>
   </div>
   <script src="popup.js"></script>
 </body>
